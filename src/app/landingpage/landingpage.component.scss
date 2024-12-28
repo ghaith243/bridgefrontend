@@ -1,0 +1,293 @@
+
+/* Styles généraux */
+body {
+    background-color: #fde8f0; /* Fond rose clair */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Titre principal */
+  h1 {
+    margin-top: 50px;
+    font-size: 2.5em;
+    color: #ff4c4c; /* Rouge vif */
+    text-align: center;
+  }
+  
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Colonnes de cartes */
+  .col {
+    flex: 0 0 32%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Carte */
+  .card {
+    width: 100%;
+    height: 350px; /* Hauteur fixe pour toutes les cartes */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #dc96a7, #fff4e1); /* Dégradé rose-jaune */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image de la carte */
+  .card-image img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour l'image */
+    object-fit: cover; /* Assure que l'image reste à la même taille et ne se déforme pas */
+    border-bottom: 2px solid #f1f1f1;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Contenu de la carte */
+  .card-stacked {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: #f5eeee;
+    flex-grow: 1; /* Permet à la zone de contenu de remplir l'espace restant */
+  }
+  
+  .card-content h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  
+  /* Actions de la carte */
+  .card-action {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffe6e6;
+    border-top: 1px solid #ddd;
+  }
+  
+  .card-action button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-action button:hover {
+    background-color: #d43f3f;
+  }
+  
+    /* Style général du formulaire */
+body {
+    background-color: #f1a6d5; /* Fond principal jaune pâle */
+          
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Hauteur complète de la fenêtre */
+      display: flex; /* Utilisation de Flexbox pour centrer le formulaire */
+      justify-content: center; /* Centrage horizontal */
+      align-items: center; /* Centrage vertical */
+    }
+    
+    .form-title {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    
+    /* Conteneur du formulaire */
+    .form-container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre douce pour ajouter de la profondeur */
+      box-sizing: border-box;
+     
+    }
+    
+    /* Groupes de champs de formulaire */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 8px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #fafafa;
+      color: #333;
+      box-sizing: border-box;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #007BFF; /* Bordure bleue lors du focus */
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Ombre bleue au focus */
+      outline: none;
+    }
+    
+    textarea {
+      resize: vertical; /* Permet de redimensionner la hauteur du champ message */
+    }
+    
+    /* Bouton d'envoi */
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF; /* Bleu clair */
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #0056b3; /* Bleu foncé au survol */
+    }
+    
+    /* Responsivité */
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 15px;
+      }
+    
+      .form-title {
+        font-size: 1.8em;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .form-container {
+        width: 90%; /* Plus petit conteneur sur les écrans très petits */
+        padding: 10px;
+      }
+    
+      .form-title {
+        font-size: 1.5em;
+      }
+    }
+    
+    
+
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    .col {
+      flex: 0 0 48%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col {
+      flex: 0 0 100%;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    .form-container {
+      padding: 15px;
+    }
+  }
+  
+  
+  /* Conteneur du logo */
+  .logo-container {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Place le logo en haut à gauche */
+    z-index: 1000; /* S'assure que le logo est au-dessus du contenu */
+  }
+  
+  .logo {
+    width: 60px; /* Taille ajustée du logo */
+    height: auto;
+  }
+  
+  /* Ajustements supplémentaires */
+  .container {
+    margin-top: 120px; /* Décale davantage les cartes sous la page */
+  }
+  
+  @media (max-width: 768px) {
+    .logo-container {
+      top: 15px; /* Ajustement pour les écrans plus petits */
+      left: 15px;
+    }
+  
+    .container {
+      margin-top: 100px; /* Décale légèrement moins pour les tablettes */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-container {
+      top: 10px; /* Ajustement supplémentaire pour très petits écrans */
+      left: 10px;
+    }
+  
+    .container {
+      margin-top: 80px; /* Décalage réduit pour petits écrans */
+    }
+  }
+ 
+  

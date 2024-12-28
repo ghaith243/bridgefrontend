@@ -1,0 +1,168 @@
+
+/* Styles généraux */
+body {
+  background-color: #fde8f0; /* Fond rose clair */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Titre principal */
+h1 {
+  margin-top: 50px;
+  font-size: 2.5em;
+  color: #ff4c4c; /* Rouge vif */
+  text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Colonnes de cartes */
+.col {
+  flex: 0 0 32%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Carte */
+.card {
+  width: 100%;
+  height: 350px; /* Hauteur fixe pour toutes les cartes */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #dc96a7, #fff4e1); /* Dégradé rose-jaune */
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image de la carte */
+.card-image img {
+  width: 100%;
+  height: 200px; /* Hauteur fixe pour l'image */
+  object-fit: cover; /* Assure que l'image reste à la même taille et ne se déforme pas */
+  border-bottom: 2px solid #f1f1f1;
+  transition: transform 0.3s ease;
+}
+
+.card-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Contenu de la carte */
+.card-stacked {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f5eeee;
+  flex-grow: 1; /* Permet à la zone de contenu de remplir l'espace restant */
+}
+
+.card-content h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* Actions de la carte */
+.card-action {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between; /* Espacement entre les boutons */
+  background-color: #ffe6e6;
+  border-top: 1px solid #ddd;
+}
+
+/* Boutons */
+.card-action button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 10px; /* Espacement entre les boutons */
+  flex: 1; /* Pour que les boutons prennent une taille égale */
+  margin-bottom: 10px;
+}
+
+/* Effet au survol des boutons */
+.card-action button:hover {
+  background-color: #d43f3f;
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+/* Empêcher le dernier bouton d'avoir une marge à droite */
+.card-action button:last-child {
+  margin-right: 0;
+}
+
+/* Ajouter des ombres aux boutons */
+.card-action button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-action button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteneur du formulaire */
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .col {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col {
+    flex: 0 0 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+}

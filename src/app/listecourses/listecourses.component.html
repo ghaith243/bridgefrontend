@@ -1,0 +1,30 @@
+<h1 class='center'>Liste des Cours</h1>
+<div class='container'>
+  <div class="row">
+    <div *ngFor="let course of courses" class="col s6 m4">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img [src]="course.imageUrl" alt="Course Image" width="150">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.description }}</p>
+            <p>Prix : {{ course.price }}€</p>
+          </div>
+          <div class="card-action">
+            <button (click)="deleteCourse(course.id)" class="btn red">Supprimer</button>
+            <button (click)="updatecourse(course.id)" class="btn btn-info">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="courses.length === 0">
+  <p>Aucun cours disponible.</p>
+</div>
+
+
+  
